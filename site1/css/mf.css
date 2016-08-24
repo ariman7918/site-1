@@ -1,0 +1,65 @@
+/* Блок слайдера */
+#slaid {
+	/* Задаём относительное позиционирование */
+	position: relative;
+	/*Размер и рамка блока*/
+	width: 400px;
+	height: 200px;
+	border: 2px solid #333;
+	border-radius: 5px;
+}
+/* Групповой селектор для 7-ми картинок */
+.image1,
+.image2,
+.image3,
+.image4,
+.image5,
+.image6,
+.image7 {
+/* Позиционируем абсолютно относительно блока */
+	position: absolute;
+/* Делаем их полностью прозрачными */
+	opacity: 0;
+	width: 400px;
+	height: 200px;
+}
+/* Подключаем анимацию к первой картинке */
+.image1{
+	animation-name: image;
+	animation-iteration-count: 2;
+	animation-duration: 5s;
+	animation-delay: 0s;
+	
+}
+/* Анимация последующих картинок выполняется с задержкой начала
+ необходимой для прокрутки предыдущих изображений */
+.image2 {
+	animation-name: image;
+	animation-iteration-count: 2;
+	animation-duration: 5s;
+	animation-delay: 5s;
+	animation-play-state: running;
+}
+.image3 {
+	animation-name: image;
+	animation-iteration-count: 2;
+	animation-duration: 5s;
+	animation-delay: 10s;
+}
+
+/* Анимации для первой картинки */
+@keyframes image {
+	
+/* Задаём изменение прозрачности. 
+Здесь можно добавить вращение, перемещение из-за границ блока
+ или появление из центра (масштабирование) */
+	0% {
+	opacity: 0;
+	}
+	50% {
+	opacity: 1;
+	}
+	100% {
+	opacity: 0;
+	}
+/* Анимация для следующих 6-и картинок */

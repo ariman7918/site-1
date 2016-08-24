@@ -1,0 +1,21 @@
+@keyframes go
+{
+	0%{opacity:0; }
+	10%{opacity:1;}
+	33% {opacity:1;}
+	43% {opacity:0;}
+	100%{opacity:0;}
+}
+.big {
+	width: 700px;
+	height: 300px;
+	overflow: hidden;
+	border: 2px;
+}
+.small {
+	height: inherit;
+	width: inherit;
+	-moz-animation: go 0s 10s infinite;
+	background: red;
+	-moz-transform: translateX;
+}
