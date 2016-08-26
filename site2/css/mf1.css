@@ -1,0 +1,158 @@
+/* Блок слайдера */
+#slaid {
+	/* Задаём относительное позиционирование */
+	position: relative;
+	/*Размер и рамка блока*/
+	width: 400px;
+	height: 200px;
+	border: 2px solid #333;
+	border-radius: 5px;
+}
+/* Групповой селектор для 7-ми картинок */
+.image1,
+.image2,
+.image3,
+.image4,
+.image5,
+.image6,
+.image7 {
+/* Позиционируем абсолютно относительно блока */
+	position: absolute;
+/* Делаем их полностью прозрачными */
+	opacity: 0;
+	width: 400px;
+	height: 200px;
+}
+/* Подключаем анимацию к первой картинке */
+.image1{
+	animation: one-image 8s 1s ease alternate;
+}
+/* Анимация последующих картинок выполняется с задержкой начала
+ необходимой для прокрутки предыдущих изображений */
+.image2 {
+	animation: one-image 8s 5s ease alternate;
+}
+.image3 {
+	animation: three-image 8s 10s ease alternate;
+}
+.image4 {	
+	animation: four-image 8s 14s ease alternate;	
+}
+.image5 {
+	animation: five-image 8s 18s ease alternate;
+}
+.image6 {
+	animation: six-image 8s 22s ease alternate;
+}
+.image7 {	
+	animation: seven-image 8s 26s ease alternate;
+}
+/* Последняя картинка не прозрачная остаётся видной после прокрутки */
+.image8 {
+	position: absolute;
+	width: 400px;
+	height: 200px;
+	animation: eight-image 34s ease alternate;
+}
+/* Анимации для первой картинки */
+@keyframes one-image{
+	
+/* Задаём изменение прозрачности. 
+Здесь можно добавить вращение, перемещение из-за границ блока
+ или появление из центра (масштабирование) */
+	0% {
+	opacity: 1;
+	}
+	50% {
+	opacity: 1;
+	}
+	100% {
+	opacity: 0;
+	}
+}
+/* Анимация для следующих 6-и картинок */
+@keyframes two-image{
+	0% {
+	opacity: 0;
+	}
+	50% {
+	opacity: 1;
+	}
+	100% {
+	opacity: 0;
+	}
+}
+
+@keyframes three-image{
+	0% {
+	opacity: 0;
+	}
+	50% {
+	opacity: 1;
+	}
+	100% {
+	opacity: 0;
+	}
+}
+
+@keyframes four-image{
+	0% {
+	opacity: 0;
+	}
+	50% {
+	opacity: 1;
+	}
+	100% {
+	opacity: 0;
+	}
+}
+
+@keyframes five-image{
+	0% {
+	opacity: 0;
+	}
+	50% {
+	opacity: 1;
+	}
+	100% {
+	opacity: 0;
+	}
+}
+
+@keyframes six-image{
+	0% {
+	opacity: 0;
+	}
+	50% {
+	opacity: 1;
+	}
+	100% {
+	opacity: 0;
+	}
+}
+
+@keyframes seven-image{
+	0% {
+	opacity: 0;
+	}
+	50% {
+	opacity: 1;
+	}
+	100% {
+	opacity: 0;
+	}
+}
+/* Анимация для восьмой картинки */
+@keyframes eight-image{
+/* остаётся прозрачной пока не прокрутятся предыдущие */
+	0% {
+	opacity: 0;
+	}
+	87% {
+	opacity: 0;
+	}
+/*Становиться видимой в конце работы слайдера */
+	100% {
+	opacity: 1;
+	}
+}

@@ -1,0 +1,52 @@
+@keyframes slai
+{
+	from {opacity:0;}
+	10%{opacity:0.5;}
+	33% {opacity:0.7;}
+	43% {opacity:0.8;}
+	to {opacity:1;}
+}
+.slaider{
+	height: 600px;
+	width: 100%;
+	margin: auto;
+	-moz-animation-duration:5s; 
+	-moz-animation-timing-function: 3s ;
+	-moz-animation-delay:0s;
+	-moz-animation-iteration-count:  3s;
+	-moz-animation-fill-mode:  forwards;
+	animation-duration:3s; 
+	animation-timing-function:  3s;
+	animation-delay:1ms;
+	animation-iteration-count:  infinite;
+	animation-fill-mode:  forwards;	
+	animation-name: slai;
+	border: 2px solid;	
+}
+.slai1 {
+
+	height: inherit;
+    width: inherit;
+	background: url("image/main.jpg") no-repeat ;
+}
+
+.slai2 {
+
+	height: inherit;
+    width: inherit;
+	background: url("image/in_.jpg") no-repeat ;
+}
+
+.slai3 {
+
+	height: inherit;
+    width: inherit;
+	background: url("image/magaz.jpg") no-repeat ;
+}
+
+.slai4 {
+
+	height: inherit;
+    width: inherit;
+	background: url("image/history.jpg") no-repeat ;
+}
